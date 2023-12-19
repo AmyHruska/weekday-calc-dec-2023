@@ -12,4 +12,5 @@ describe('WeekdayObj', () => {
     userDate.weekdayFinder();
     expect(userDate.weekday).toEqual('Wednesday');
     });
+    
 });

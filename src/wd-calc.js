@@ -1,12 +1,14 @@
-export default function WeekdayObj (userInput) {
-    this.userInput = userInput;
-}
+export default class WeekdayObj {
+    constructor(userInput) {
+        this.userInput = userInput;
+    }
 
-WeekdayObj.prototype.weekdayFinder = function () {
-    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let date = new Date(this.userInput);
-    let weekdayNumber = date.getDay();
-    this.weekday = dayNames[weekdayNumber];
+    weekdayFinder() {
+        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let date = new Date(this.userInput);
+        let weekdayNumber = date.getDay();
+        this.weekday = dayNames[weekdayNumber];
+    }
 }
 // let birthday = new WeekdayObj('February 14, 1996');
 // birthday.weekdayFinder();
